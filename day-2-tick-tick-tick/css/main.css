@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+body {
+    /** CSS background pattern http://lea.verou.me/css3patterns/#zig-zag **/
+    background: 
+        linear-gradient(135deg, #EDAE49 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, #EDAE49 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, #EDAE49 25%, transparent 25%),
+        linear-gradient(45deg, #EDAE49 25%, transparent 25%);	
+    background-size: 100px 100px;
+    background-color:#D1495B;
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.clock {
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 30rem;
+    height: 30rem;
+    border:20px solid #00798C;
+    border-radius:50%;
+    margin:50px auto;
+    position: relative;
+    padding:2rem;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #00798C,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+
+.inner-clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.pointer {
+    background: #00798C;
+    height: 6px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 42%;
+    transform: rotate(90deg);
+    transform-origin: 85%;
+    transition: all 0.05s;
+    transition-timing-function: ease-in-out;
+}
+
+.hours-pointer {
+    background: #003D5B;
+}
+
+.minutes-pointer {
+    background: #30638E;
+}
